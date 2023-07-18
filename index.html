@@ -19,8 +19,8 @@
    
     <div class="text-center container">
         <h1 class="display-1">IvIev Andron</h1>
-        <div class="lead typist"> Go developer. </div>
-        <div class="p-5">
+        <div class="lead typist" id="animated-text"></div>
+        <div class="p-4">
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/boris-on" aria-label="My GitHub">
                 <i class="fab fa-github fa-3x socialicons"></i>
             </a>
@@ -34,5 +34,18 @@
     </div>
 </div>
 </div>
+<script>
+    const animatedText = document.getElementById('animated-text');
+    const texts = ['Go', 'TON', 'KaiOS'];
+    let index = 0;
+  
+    function changeText() {
+      animatedText.textContent = texts[index];
+      index = (index + 1) % texts.length;
+    }
+  
+    setInterval(changeText, 2000);
+  </script>
+
 </body>
 </html>
